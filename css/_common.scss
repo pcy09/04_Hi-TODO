@@ -1,0 +1,32 @@
+@import "variable";
+
+html {
+	background-color: $html;
+}
+body {
+	position: relative;
+	background-color: $white;
+	min-width: 320px;
+	max-width: 800px;
+	margin: 0 auto;
+}
+body * {
+	font-family: "Noto Sans KR", sans-serif;
+	letter-spacing: 0;
+	box-sizing: border-box;
+}
+a {
+	text-decoration: none;
+	color: inherit;
+}
+
+.inner {
+	width: 90%;
+	margin: 0 auto;
+}
+button {
+	padding: 0;
+	margin: 0;
+	border: none;
+	background-color: transparent;
+}

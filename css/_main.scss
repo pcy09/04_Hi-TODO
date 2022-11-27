@@ -1,0 +1,164 @@
+@import "variable";
+main {
+	#section1 {
+		.swiper.profile {
+			width: 100%;
+			height: 105px;
+			padding: 10px 5%;
+			.swiper-slide {
+				width: 60px;
+				a {
+					width: 100%;
+					height: 100%;
+					display: flex;
+					flex-direction: column;
+					justify-content: center;
+					gap: 5px;
+				}
+				@each $item in $thumbnail {
+					.thumbnail.#{$item} {
+						background-image: url("../img/#{$item}.png");
+					}
+				}
+				.thumbnail {
+					width: 60px;
+					height: 60px;
+					border-radius: 30px;
+				}
+
+				p {
+					font-size: 14px;
+					text-align: center;
+					color: $b1b8c0;
+				}
+				p.active {
+					color: $black;
+				}
+			}
+		}
+	}
+	#section2 {
+		.swiper.days {
+			width: 100%;
+			height: 80px;
+			padding: 10px 5%;
+			.swiper-wrapper {
+				.swiper-slide {
+					width: 50px;
+					a {
+						display: flex;
+						flex-direction: column;
+						align-items: center;
+						justify-content: center;
+						gap: 5px;
+						width: 50px;
+						height: 50px;
+						border-radius: 5px;
+						background-color: $ededed;
+						color: $b1b8c0;
+						p:nth-of-type(1) {
+							font-size: 13px;
+						}
+						p:nth-of-type(2) {
+							font-size: 16px;
+							font-weight: bold;
+						}
+						&.checked {
+							background-color: $black;
+							p {
+								color: $white;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+	#section3 {
+		width: 100%;
+		background-color: $efefef;
+		padding: 20px 20px 100px;
+		.groupWrap {
+			margin-bottom: 20px;
+			.group {
+				cursor: pointer;
+				margin-bottom: 5px;
+				width: 100%;
+				height: 45px;
+				border-radius: 10px;
+				padding-left: 15px;
+				display: flex;
+				align-items: center;
+				justify-content: space-between;
+				box-shadow: 0 0 5px rgba(0, 0, 0, 0.25);
+				p.groupName {
+					font-size: 16px;
+					font-weight: 400;
+					color: $white;
+					line-height: 45px;
+				}
+				span {
+					display: block;
+					width: 45px;
+					height: 45px;
+					text-align: center;
+					line-height: 45px;
+					color: $white;
+				}
+				&.sky {
+					background-color: $sky1;
+				}
+				&.orange {
+					background-color: $orange;
+				}
+			}
+			ul.todolist {
+				width: 100%;
+				background-color: $white;
+				border-radius: 10px;
+				box-shadow: 0 0 5px rgba(0, 0, 0, 0.25);
+
+				li {
+					height: 45px;
+					display: flex;
+					gap: 15px;
+					align-items: center;
+					padding: 0 15px;
+					border-bottom: 1px solid $ededed;
+					button {
+						height: 45px;
+						i {
+							font-size: 20px;
+						}
+					}
+					p {
+						line-height: 45px;
+						padding-bottom: 4px;
+					}
+				}
+				button.comment {
+					cursor: pointer;
+					width: 100%;
+					height: 45px;
+					color: $b1b8c0;
+				}
+			}
+		}
+		.createGroup {
+			width: 100%;
+			height: 45px;
+			background-color: $white;
+			border-radius: 10px;
+			box-shadow: 0 0 5px rgba(0, 0, 0, 0.25);
+			padding: 0 20px;
+			button {
+				cursor: pointer;
+				width: 100%;
+				height: 100%;
+				font-size: 20px;
+				font-weight: 600;
+				color: $b1b8c0;
+			}
+		}
+	}
+}

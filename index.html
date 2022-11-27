@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="ko" ondragstart="return false" onselectstart="return false">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+		<!-- reset CDN -->
+		<link
+			rel="stylesheet"
+			href="https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.css"
+		/>
+		<!-- 구글폰트 CDN -->
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700;900&display=swap"
+			rel="stylesheet"
+		/>
+		<!-- 폰트어썸 CDN-->
+		<script
+			src="https://kit.fontawesome.com/a9626ecfba.js"
+			crossorigin="anonymous"
+		></script>
+		<!-- swiper CSS -->
+		<link
+			rel="stylesheet"
+			href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"
+		/>
+		<!-- CSS -->
+		<link rel="stylesheet" href="css/style.css" />
+		<!-- swiper js -->
+		<script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+		<!-- 스크립트 -->
+		<script defer src="js/days.js"></script>
+		<script defer src="js/main.js"></script>
+	</head>
+	<body>
+		<header>
+			<div class="inner">
+				<div class="headerWrap">
+					<div class="today">
+						<p>11월 22일</p>
+						<span>TUE</span>
+					</div>
+					<ul class="subMenu">
+						<li>
+							<a href=""><i class="fa-regular fa-bell"></i></a>
+						</li>
+						<li>
+							<a href=""><i class="fa-solid fa-ellipsis-vertical"></i></a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</header>
+		<main>
+			<section id="section1">
+				<div class="swiper mySwiper profile">
+					<div class="swiper-wrapper">
+						<div class="swiper-slide">
+							<a href="">
+								<div class="thumbnail thumb1"></div>
+								<p class="active">나의 할일</p>
+							</a>
+						</div>
+						<div class="swiper-slide">
+							<a href="">
+								<div class="thumbnail thumb2"></div>
+								<p>yongha</p>
+							</a>
+						</div>
+						<div class="swiper-slide">
+							<a href="">
+								<div class="thumbnail thumb3"></div>
+								<p>HAN</p>
+							</a>
+						</div>
+						<div class="swiper-slide">
+							<a href="">
+								<div class="thumbnail thumb4"></div>
+								<p>lijung</p>
+							</a>
+						</div>
+						<div class="swiper-slide">
+							<a href="">
+								<div class="thumbnail thumb5"></div>
+								<p>tomatojin</p>
+							</a>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section id="section2">
+				<div class="swiper mySwiper days" dir="rtl">
+					<div id="days" class="swiper-wrapper"></div>
+				</div>
+			</section>
+			<section id="section3">
+				<div class="groupWrap">
+					<div class="group sky">
+						<p class="groupName">🏋️‍♀️ 운동하기</p>
+						<span>+</span>
+					</div>
+					<ul class="todolist">
+						<li>
+							<button><i class="fa-regular fa-square"></i></button>
+							<p>팔굽혀펴기 30회</p>
+						</li>
+						<li>
+							<button><i class="fa-regular fa-square"></i></button>
+							<p>아령 10회</p>
+						</li>
+						<li>
+							<button><i class="fa-regular fa-square"></i></button>
+							<p>윗몸일으키기 20회</p>
+						</li>
+						<button class="comment">댓글 7개 모두 보기</button>
+					</ul>
+				</div>
+				<div class="groupWrap">
+					<div class="group orange">
+						<p class="groupName">📖 공부하기</p>
+						<span>+</span>
+					</div>
+					<ul class="todolist">
+						<li>
+							<button><i class="fa-regular fa-square"></i></button>
+							<p>리액트 예제 1개 연습</p>
+						</li>
+						<li>
+							<button><i class="fa-regular fa-square"></i></button>
+							<p>오늘 배운 내용 티스토리에 정리해서 업로드</p>
+						</li>
+						<li>
+							<button><i class="fa-regular fa-square"></i></button>
+							<p>피그마 시안 작업</p>
+						</li>
+						<li>
+							<button><i class="fa-regular fa-square"></i></button>
+							<p>모바일 웹&앱 코딩</p>
+						</li>
+						<button class="comment">댓글 0개 모두 보기</button>
+					</ul>
+				</div>
+				<div class="createGroup">
+					<button>+</button>
+				</div>
+			</section>
+		</main>
+		<footer>
+			<ul class="navigation">
+				<li class="selected">
+					<a href=""><i class="fa-solid fa-house"></i></a>
+				</li>
+				<li>
+					<a href=""><i class="fa-solid fa-calendar-days"></i></a>
+				</li>
+				<li>
+					<a href=""><i class="fa-solid fa-magnifying-glass"></i></a>
+				</li>
+				<li>
+					<a href=""><i class="fa-solid fa-user"></i></a>
+				</li>
+			</ul>
+		</footer>
+	</body>
+</html>
