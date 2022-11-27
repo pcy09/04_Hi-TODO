@@ -55,7 +55,9 @@ main {
 						height: 50px;
 						border-radius: 5px;
 						background-color: $ededed;
-						color: $b1b8c0;
+						p {
+							color: $b1b8c0;
+						}
 						p:nth-of-type(1) {
 							font-size: 13px;
 						}
