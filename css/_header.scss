@@ -1,5 +1,13 @@
 @import "variable";
 header {
+	position: fixed;
+	left: 50%;
+	top: 0;
+	transform: translateX(-50%);
+	background-color: $white;
+	z-index: 999;
+	width: 100%;
+	max-width: 800px;
 	.headerWrap {
 		display: flex;
 		padding: 20px 0 10px 0;

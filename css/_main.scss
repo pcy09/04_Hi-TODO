@@ -1,5 +1,6 @@
 @import "variable";
 main {
+	margin-top: 55px;
 	#section1 {
 		.swiper.profile {
 			width: 100%;
@@ -134,8 +135,12 @@ main {
 						}
 					}
 					p {
+						width: 100%;
 						line-height: 45px;
 						padding-bottom: 4px;
+						white-space: nowrap;
+						overflow: hidden;
+						text-overflow: ellipsis;
 					}
 				}
 				button.comment {
