@@ -10,10 +10,13 @@ body {
   min-width: 320px;
   max-width: 800px;
   margin: 0 auto;
-  height: 100vh;
+  height: auto;
+  min-height: 100vh;
+  background-color: #f2f5fd;
 }
 
 body * {
+  font-size: 16px;
   font-family: "Noto Sans KR", sans-serif;
   letter-spacing: 0;
   box-sizing: border-box;
@@ -180,11 +183,12 @@ main #section2 .swiper.days .swiper-wrapper .swiper-slide a.checked p {
 }
 main #todolist {
   width: 100%;
-  background-color: #f2f5fd;
   padding: 20px 20px 100px;
 }
 main #todolist .groupWrap {
+  margin: auto;
   margin-bottom: 20px;
+  max-width: 600px;
 }
 main #todolist .groupWrap .group {
   position: relative;
@@ -231,6 +235,12 @@ main #todolist .groupWrap .group.sky {
 }
 main #todolist .groupWrap .group.orange {
   background-color: #fc822c;
+}
+main #todolist .groupWrap .group.purple {
+  background-color: #623ad6;
+}
+main #todolist .groupWrap .group.green {
+  background-color: #00b01c;
 }
 main #todolist .groupWrap ul.list {
   width: 100%;
@@ -281,7 +291,9 @@ main #todolist .groupWrap.active .dropDown {
   transform: rotate(-180deg);
 }
 main #todolist .createGroup {
+  margin: auto;
   width: 100%;
+  max-width: 600px;
   height: 45px;
   background-color: #fff;
   border-radius: 10px;
@@ -296,6 +308,92 @@ main #todolist .createGroup button {
   font-weight: 600;
   color: #b1b8c0;
 }
+main #todolist #addGroupFormWrap {
+  position: fixed;
+  z-index: 999;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+  left: 0;
+  top: 0;
+  display: none;
+}
+main #todolist #addGroupFormWrap form.addGroupForm {
+  position: absolute;
+  z-index: 999;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 90%;
+  max-width: 500px;
+  height: 200px;
+  background-color: #623ad6;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border-radius: 10px;
+  overflow: hidden;
+}
+main #todolist #addGroupFormWrap form.addGroupForm input {
+  height: 160px;
+  padding: 0 20px;
+  padding-bottom: 100px;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  color: #fff;
+}
+main #todolist #addGroupFormWrap form.addGroupForm input::-moz-placeholder {
+  color: #fff;
+  font-size: 16px;
+}
+main #todolist #addGroupFormWrap form.addGroupForm input:-ms-input-placeholder {
+  color: #fff;
+  font-size: 16px;
+}
+main #todolist #addGroupFormWrap form.addGroupForm input::placeholder {
+  color: #fff;
+  font-size: 16px;
+}
+main #todolist #addGroupFormWrap form.addGroupForm .bottomWrap {
+  background-color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 20px;
+  width: 100%;
+  height: 40px;
+}
+main #todolist #addGroupFormWrap form.addGroupForm .bottomWrap ul.colorWrap {
+  display: flex;
+  gap: 20px;
+}
+main #todolist #addGroupFormWrap form.addGroupForm .bottomWrap ul.colorWrap li {
+  cursor: pointer;
+}
+main #todolist #addGroupFormWrap form.addGroupForm .bottomWrap ul.colorWrap li i {
+  font-size: 30px;
+}
+main #todolist #addGroupFormWrap form.addGroupForm .bottomWrap ul.colorWrap li i.purple {
+  color: #623ad6;
+}
+main #todolist #addGroupFormWrap form.addGroupForm .bottomWrap ul.colorWrap li i.sky {
+  color: #00b2ff;
+}
+main #todolist #addGroupFormWrap form.addGroupForm .bottomWrap ul.colorWrap li i.green {
+  color: #00b01c;
+}
+main #todolist #addGroupFormWrap form.addGroupForm .bottomWrap ul.colorWrap li i.orange {
+  color: #fc822c;
+}
+main #todolist #addGroupFormWrap form.addGroupForm .bottomWrap button {
+  cursor: pointer;
+  font-weight: bold;
+  width: 60px;
+  height: 40px;
+  color: #3478f6;
+}
+
 footer ul.navigation {
   position: fixed;
   left: 50%;

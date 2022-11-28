@@ -82,10 +82,11 @@ main {
 	}
 	#todolist {
 		width: 100%;
-		background-color: #f2f5fd;
 		padding: 20px 20px 100px;
 		.groupWrap {
+			margin: auto;
 			margin-bottom: 20px;
+			max-width: 600px;
 			.group {
 				position: relative;
 				cursor: pointer;
@@ -126,10 +127,16 @@ main {
 					}
 				}
 				&.sky {
-					background-color: $sky1;
+					background-color: $sky;
 				}
 				&.orange {
 					background-color: $orange;
+				}
+				&.purple {
+					background-color: $purple;
+				}
+				&.green {
+					background-color: $green;
 				}
 			}
 			ul.list {
@@ -185,7 +192,9 @@ main {
 			}
 		}
 		.createGroup {
+			margin: auto;
 			width: 100%;
+			max-width: 600px;
 			height: 45px;
 			background-color: $white;
 			border-radius: 10px;
@@ -200,7 +209,82 @@ main {
 				color: $b1b8c0;
 			}
 		}
-		.appenderFormWrap {
+		#addGroupFormWrap {
+			position: fixed;
+			z-index: 999;
+			width: 100%;
+			height: 100vh;
+			background-color: rgba(0, 0, 0, 0.5);
+			left: 0;
+			top: 0;
+			display: none;
+			form.addGroupForm {
+				position: absolute;
+				z-index: 999;
+				top: 50%;
+				left: 50%;
+				transform: translate(-50%, -50%);
+				width: 90%;
+				max-width: 500px;
+				height: 200px;
+				background-color: $purple;
+				display: flex;
+				flex-direction: column;
+				justify-content: space-between;
+				border-radius: 10px;
+				overflow: hidden;
+				input {
+					height: 160px;
+					padding: 0 20px;
+					padding-bottom: 100px;
+					background-color: transparent;
+					border: none;
+					outline: none;
+					color: $white;
+					&::placeholder {
+						color: $white;
+						font-size: 16px;
+					}
+				}
+				.bottomWrap {
+					background-color: $white;
+					display: flex;
+					justify-content: space-between;
+					align-items: center;
+					padding-left: 20px;
+					width: 100%;
+					height: 40px;
+					ul.colorWrap {
+						display: flex;
+						gap: 20px;
+						li {
+							cursor: pointer;
+							i {
+								font-size: 30px;
+								&.purple {
+									color: $purple;
+								}
+								&.sky {
+									color: $sky;
+								}
+								&.green {
+									color: $green;
+								}
+								&.orange {
+									color: $orange;
+								}
+							}
+						}
+					}
+					button {
+						cursor: pointer;
+						font-weight: bold;
+						width: 60px;
+						height: 40px;
+						color: $mainColor;
+					}
+				}
+			}
 		}
 	}
 }
