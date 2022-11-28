@@ -1,4 +1,7 @@
 html {
+  -webkit-text-size-adjust: none;
+  -moz-text-size-adjust: none;
+       text-size-adjust: none;
   background-color: #ffa96b;
 }
 
