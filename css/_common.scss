@@ -18,6 +18,7 @@ body * {
 	letter-spacing: 0;
 	box-sizing: border-box;
 	color: $text;
+	-webkit-tap-highlight-color: transparent;
 }
 a {
 	text-decoration: none;

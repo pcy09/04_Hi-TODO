@@ -19,6 +19,7 @@ body * {
   letter-spacing: 0;
   box-sizing: border-box;
   color: #333;
+  -webkit-tap-highlight-color: transparent;
 }
 
 a {
