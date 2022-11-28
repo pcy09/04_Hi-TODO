@@ -2,6 +2,7 @@
 main {
 	margin-top: 55px;
 	#section1 {
+		background-color: $white;
 		.swiper.profile {
 			width: 100%;
 			height: 105px;
@@ -39,6 +40,8 @@ main {
 		}
 	}
 	#section2 {
+		background-color: $white;
+
 		.swiper.days {
 			width: 100%;
 			height: 80px;
@@ -77,13 +80,14 @@ main {
 			}
 		}
 	}
-	#section3 {
+	#todolist {
 		width: 100%;
 		background-color: $efefef;
 		padding: 20px 20px 100px;
 		.groupWrap {
 			margin-bottom: 20px;
 			.group {
+				position: relative;
 				cursor: pointer;
 				margin-bottom: 5px;
 				width: 100%;
@@ -94,19 +98,32 @@ main {
 				align-items: center;
 				justify-content: space-between;
 				box-shadow: 0 0 5px rgba(0, 0, 0, 0.25);
+				.groupContainer {
+					position: absolute;
+					left: 0;
+					top: 0;
+					width: 100%;
+					height: 45px;
+				}
 				p.groupName {
-					font-size: 16px;
-					font-weight: 400;
+					font-size: 18px;
+					font-weight: 500;
 					color: $white;
 					line-height: 45px;
+					pointer-events: none;
 				}
 				span {
-					display: block;
+					pointer-events: none;
 					width: 45px;
 					height: 45px;
-					text-align: center;
-					line-height: 45px;
-					color: $white;
+					display: flex;
+					justify-content: center;
+					align-items: center;
+					i {
+						font-size: 20px;
+						transition: all 0.5s;
+						color: $white;
+					}
 				}
 				&.sky {
 					background-color: $sky1;
@@ -115,8 +132,10 @@ main {
 					background-color: $orange;
 				}
 			}
-			ul.todolist {
+			ul.list {
 				width: 100%;
+				height: 0;
+				overflow: hidden;
 				background-color: $white;
 				border-radius: 10px;
 				box-shadow: 0 0 5px rgba(0, 0, 0, 0.25);
@@ -129,13 +148,18 @@ main {
 					padding: 0 15px;
 					border-bottom: 1px solid $ededed;
 					button {
+						cursor: pointer;
+						display: block;
+						width: 55px;
 						height: 45px;
 						i {
-							font-size: 20px;
+							pointer-events: none;
+							font-size: 30px;
+							color: $efefef;
 						}
 					}
 					p {
-						width: 100%;
+						flex: 1;
 						line-height: 45px;
 						padding-bottom: 4px;
 						white-space: nowrap;
@@ -145,9 +169,18 @@ main {
 				}
 				button.comment {
 					cursor: pointer;
+					font-size: 15px;
 					width: 100%;
 					height: 45px;
 					color: $b1b8c0;
+				}
+			}
+			&.active {
+				ul.list {
+					height: auto;
+				}
+				.dropDown {
+					transform: rotate(-180deg);
 				}
 			}
 		}
@@ -166,6 +199,8 @@ main {
 				font-weight: 600;
 				color: $b1b8c0;
 			}
+		}
+		.appenderFormWrap {
 		}
 	}
 }

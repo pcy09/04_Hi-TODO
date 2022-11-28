@@ -4,10 +4,11 @@ html {
 
 body {
   position: relative;
-  background-color: #fff;
+  background-color: #efefef;
   min-width: 320px;
   max-width: 800px;
   margin: 0 auto;
+  height: 100vh;
 }
 
 body * {
@@ -89,6 +90,9 @@ header .headerWrap ul.subMenu li a i {
 main {
   margin-top: 55px;
 }
+main #section1 {
+  background-color: #fff;
+}
 main #section1 .swiper.profile {
   width: 100%;
   height: 105px;
@@ -133,6 +137,9 @@ main #section1 .swiper.profile .swiper-slide p {
 main #section1 .swiper.profile .swiper-slide p.active {
   color: #000;
 }
+main #section2 {
+  background-color: #fff;
+}
 main #section2 .swiper.days {
   width: 100%;
   height: 80px;
@@ -168,15 +175,16 @@ main #section2 .swiper.days .swiper-wrapper .swiper-slide a.checked {
 main #section2 .swiper.days .swiper-wrapper .swiper-slide a.checked p {
   color: #fff;
 }
-main #section3 {
+main #todolist {
   width: 100%;
   background-color: #efefef;
   padding: 20px 20px 100px;
 }
-main #section3 .groupWrap {
+main #todolist .groupWrap {
   margin-bottom: 20px;
 }
-main #section3 .groupWrap .group {
+main #todolist .groupWrap .group {
+  position: relative;
   cursor: pointer;
   margin-bottom: 5px;
   width: 100%;
@@ -188,33 +196,48 @@ main #section3 .groupWrap .group {
   justify-content: space-between;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.25);
 }
-main #section3 .groupWrap .group p.groupName {
-  font-size: 16px;
-  font-weight: 400;
+main #todolist .groupWrap .group .groupContainer {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 45px;
+}
+main #todolist .groupWrap .group p.groupName {
+  font-size: 18px;
+  font-weight: 500;
   color: #fff;
   line-height: 45px;
+  pointer-events: none;
 }
-main #section3 .groupWrap .group span {
-  display: block;
+main #todolist .groupWrap .group span {
+  pointer-events: none;
   width: 45px;
   height: 45px;
-  text-align: center;
-  line-height: 45px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+main #todolist .groupWrap .group span i {
+  font-size: 20px;
+  transition: all 0.5s;
   color: #fff;
 }
-main #section3 .groupWrap .group.sky {
+main #todolist .groupWrap .group.sky {
   background-color: #00b2ff;
 }
-main #section3 .groupWrap .group.orange {
+main #todolist .groupWrap .group.orange {
   background-color: #fc822c;
 }
-main #section3 .groupWrap ul.todolist {
+main #todolist .groupWrap ul.list {
   width: 100%;
+  height: 0;
+  overflow: hidden;
   background-color: #fff;
   border-radius: 10px;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.25);
 }
-main #section3 .groupWrap ul.todolist li {
+main #todolist .groupWrap ul.list li {
   height: 45px;
   display: flex;
   gap: 15px;
@@ -222,27 +245,39 @@ main #section3 .groupWrap ul.todolist li {
   padding: 0 15px;
   border-bottom: 1px solid #ededed;
 }
-main #section3 .groupWrap ul.todolist li button {
+main #todolist .groupWrap ul.list li button {
+  cursor: pointer;
+  display: block;
+  width: 55px;
   height: 45px;
 }
-main #section3 .groupWrap ul.todolist li button i {
-  font-size: 20px;
+main #todolist .groupWrap ul.list li button i {
+  pointer-events: none;
+  font-size: 30px;
+  color: #efefef;
 }
-main #section3 .groupWrap ul.todolist li p {
-  width: 100%;
+main #todolist .groupWrap ul.list li p {
+  flex: 1;
   line-height: 45px;
   padding-bottom: 4px;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
 }
-main #section3 .groupWrap ul.todolist button.comment {
+main #todolist .groupWrap ul.list button.comment {
   cursor: pointer;
+  font-size: 15px;
   width: 100%;
   height: 45px;
   color: #b1b8c0;
 }
-main #section3 .createGroup {
+main #todolist .groupWrap.active ul.list {
+  height: auto;
+}
+main #todolist .groupWrap.active .dropDown {
+  transform: rotate(-180deg);
+}
+main #todolist .createGroup {
   width: 100%;
   height: 45px;
   background-color: #fff;
@@ -250,7 +285,7 @@ main #section3 .createGroup {
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.25);
   padding: 0 20px;
 }
-main #section3 .createGroup button {
+main #todolist .createGroup button {
   cursor: pointer;
   width: 100%;
   height: 100%;
@@ -258,7 +293,6 @@ main #section3 .createGroup button {
   font-weight: 600;
   color: #b1b8c0;
 }
-
 footer ul.navigation {
   position: fixed;
   left: 50%;

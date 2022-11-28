@@ -5,10 +5,11 @@ html {
 }
 body {
 	position: relative;
-	background-color: $white;
+	background-color: $efefef;
 	min-width: 320px;
 	max-width: 800px;
 	margin: 0 auto;
+	height: 100vh;
 }
 body * {
 	font-family: "Noto Sans KR", sans-serif;
