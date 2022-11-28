@@ -2,12 +2,11 @@ html {
   -webkit-text-size-adjust: none;
   -moz-text-size-adjust: none;
        text-size-adjust: none;
-  background-color: #ffa96b;
+  background-color: #ededed;
 }
 
 body {
   position: relative;
-  background-color: #efefef;
   min-width: 320px;
   max-width: 800px;
   margin: 0 auto;
@@ -174,14 +173,14 @@ main #section2 .swiper.days .swiper-wrapper .swiper-slide a p:nth-of-type(2) {
   font-weight: bold;
 }
 main #section2 .swiper.days .swiper-wrapper .swiper-slide a.checked {
-  background-color: #000;
+  background-color: #3478f6;
 }
 main #section2 .swiper.days .swiper-wrapper .swiper-slide a.checked p {
   color: #fff;
 }
 main #todolist {
   width: 100%;
-  background-color: #efefef;
+  background-color: #f2f5fd;
   padding: 20px 20px 100px;
 }
 main #todolist .groupWrap {
@@ -327,5 +326,5 @@ footer ul.navigation li a i {
   color: #b1b8c0;
 }
 footer ul.navigation li.selected i {
-  color: #000;
+  color: #3478f6;
 }

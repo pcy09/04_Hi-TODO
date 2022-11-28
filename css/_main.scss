@@ -70,7 +70,7 @@ main {
 							font-weight: bold;
 						}
 						&.checked {
-							background-color: $black;
+							background-color: $mainColor;
 							p {
 								color: $white;
 							}
@@ -82,7 +82,7 @@ main {
 	}
 	#todolist {
 		width: 100%;
-		background-color: $efefef;
+		background-color: #f2f5fd;
 		padding: 20px 20px 100px;
 		.groupWrap {
 			margin-bottom: 20px;

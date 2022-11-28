@@ -9,13 +9,10 @@ function toggleItem(event) {
 		`<i class="fa-solid fa-square" style="color: rgb(239, 239, 239)"></i>`;
 
 	event.target.innerHTML = completed
-		? `<i class="fa-solid fa-square-check" style="color: rgb(52, 120, 246);"></i>`
+		? `<i class="fa-solid fa-square-check" style="color: rgb(133, 171, 246);"></i>`
 		: `<i class="fa-solid fa-square" style="color: rgb(239, 239, 239)"></i>`;
 	$content.style.color = completed ? "#c4c4c4" : "#333";
 	$content.style.textDecoration = completed ? "line-through" : "none";
-	event.target.querySelector("i").style.color = completed
-		? "#3478F6"
-		: "#efefef";
 }
 
 /* 이벤트 */
