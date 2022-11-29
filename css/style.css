@@ -581,11 +581,18 @@ main #todolist #addTodoFormWrap form.addTodoForm .topWrap .selectGroup p {
   pointer-events: none;
 }
 main #todolist #addTodoFormWrap form.addTodoForm .topWrap .selectGroup .topGroupName {
+  cursor: pointer;
   display: flex;
   gap: 10px;
   border: 1px solid #b1b8c0;
   border-radius: 5px;
   padding: 5px 10px;
+  background-color: #3478f6;
+}
+main #todolist #addTodoFormWrap form.addTodoForm .topWrap .selectGroup .topGroupName p.firstGroupName,
+main #todolist #addTodoFormWrap form.addTodoForm .topWrap .selectGroup .topGroupName i {
+  color: #fff;
+  transition: all 0.5s;
 }
 main #todolist #addTodoFormWrap form.addTodoForm .topWrap .selectGroup ul.groupList {
   position: absolute;
@@ -595,16 +602,23 @@ main #todolist #addTodoFormWrap form.addTodoForm .topWrap .selectGroup ul.groupL
   right: 0;
   bottom: 40px;
   border-radius: 5px;
+  overflow: hidden;
 }
 main #todolist #addTodoFormWrap form.addTodoForm .topWrap .selectGroup ul.groupList li {
+  cursor: pointer;
   width: 130px;
   height: 35px;
   line-height: 35px;
   padding-left: 10px;
   border-bottom: 1px solid #c4c4c4;
+  transition: all 0.5s;
 }
 main #todolist #addTodoFormWrap form.addTodoForm .topWrap .selectGroup ul.groupList li:nth-last-child(1) {
   border: none;
+}
+main #todolist #addTodoFormWrap form.addTodoForm .topWrap .selectGroup ul.groupList li:hover {
+  background-color: #3478f6;
+  color: #fff;
 }
 main #todolist #addTodoFormWrap form.addTodoForm .topWrap .selectGroup.active i {
   transform: rotate(180deg);
