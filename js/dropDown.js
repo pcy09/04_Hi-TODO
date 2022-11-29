@@ -4,3 +4,8 @@ for (i = 0; i < accordion.length; i++) {
 		event.target.parentNode.classList.toggle("active");
 	});
 }
+
+let $selectGroup = document.querySelector(".selectGroup");
+$selectGroup.addEventListener("click", () => {
+	$selectGroup.classList.toggle("active");
+});

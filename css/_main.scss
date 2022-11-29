@@ -172,6 +172,7 @@ main {
 						white-space: nowrap;
 						overflow: hidden;
 						text-overflow: ellipsis;
+						pointer-events: none;
 					}
 				}
 				button.comment {
@@ -284,6 +285,225 @@ main {
 						color: $mainColor;
 					}
 				}
+			}
+		}
+		.buttonGroupWrap {
+			position: fixed;
+			z-index: 997;
+			max-width: 800px;
+			left: 50%;
+			bottom: 0;
+			transform: translateX(-50%);
+			width: 100%;
+			ul.buttonGroup {
+				position: fixed;
+				right: 5%;
+				bottom: 80px;
+				display: flex;
+				flex-direction: column;
+				gap: 10px;
+				li {
+					cursor: pointer;
+					display: flex;
+					gap: 20px;
+					justify-content: flex-end;
+					align-items: center;
+					transition: all 0.5s;
+					p {
+						font-size: 18px;
+						font-weight: 500;
+						color: $white;
+						pointer-events: none;
+					}
+					i {
+						width: 50px;
+						height: 50px;
+						line-height: 50px;
+						text-align: center;
+						overflow: hidden;
+						border-radius: 100%;
+						background-color: white;
+						font-size: 25px;
+						transition: all 0.5s;
+						pointer-events: none;
+						&.white {
+							background-color: $white;
+							color: #787878;
+						}
+						&.blue {
+							background-color: $mainColor;
+							color: $white;
+						}
+						&.black {
+							background-color: $mainColor;
+							color: $white;
+							filter: drop-shadow(0 0 15px rgba(0, 0, 0, 0.25));
+						}
+					}
+					&.todoAddBtn,
+					&.groupAddBtn {
+						display: none;
+					}
+				}
+			}
+			&.active {
+				height: 100%;
+				background-color: rgba(0, 0, 0, 0.25);
+				ul.buttonGroup {
+					li {
+						p {
+							display: block;
+							text-shadow: 0 0 15px rgba(0, 0, 0, 0.25);
+						}
+						i {
+							filter: drop-shadow(0 0 15px rgba(0, 0, 0, 0.25));
+							&.white {
+								background-color: $white;
+								color: #787878;
+							}
+							&.blue {
+								background-color: $mainColor;
+								color: $white;
+							}
+							&.black {
+								background-color: #787878;
+								transform: rotate(45deg);
+							}
+						}
+						&.todoAddBtn {
+							display: flex;
+							animation: todoAddBtn 0.3s;
+						}
+						&.groupAddBtn {
+							display: flex;
+							animation: groupAddBtn 0.3s;
+						}
+						@keyframes todoAddBtn {
+							0% {
+								transform: translateY(120px);
+							}
+							100% {
+								transform: translateY(0);
+							}
+						}
+						@keyframes groupAddBtn {
+							0% {
+								transform: translateY(60px);
+							}
+							100% {
+								transform: translateY(0);
+							}
+						}
+					}
+				}
+			}
+		}
+		#addTodoFormWrap {
+			position: fixed;
+			z-index: 999;
+			width: 100%;
+			height: 100vh;
+			background-color: rgba(0, 0, 0, 0.5);
+			left: 0;
+			top: 0;
+			display: none;
+			form.addTodoForm {
+				position: absolute;
+				z-index: 999;
+				top: 50%;
+				left: 50%;
+				transform: translate(-50%, -50%);
+				width: 90%;
+				max-width: 500px;
+				height: 200px;
+				background-color: $white;
+				display: flex;
+				flex-direction: column;
+				justify-content: space-between;
+				border-radius: 10px;
+				// overflow: hidden;
+				input {
+					flex: 1;
+					padding: 0 20px;
+					padding-bottom: 80px;
+					background-color: transparent;
+					border: none;
+					outline: none;
+					color: $black;
+					&::placeholder {
+						color: $c4c4c4;
+						font-size: 16px;
+					}
+				}
+				.topWrap {
+					height: 40px;
+					display: flex;
+					align-items: center;
+					padding-left: 20px;
+					width: 100%;
+					.selectGroup {
+						position: relative;
+						display: flex;
+						align-items: center;
+						gap: 10px;
+						p {
+							pointer-events: none;
+						}
+						.topGroupName {
+							display: flex;
+							gap: 10px;
+							border: 1px solid $b1b8c0;
+							border-radius: 5px;
+							padding: 5px 10px;
+						}
+						ul.groupList {
+							position: absolute;
+							display: none;
+							flex-direction: column;
+							background-color: #fff;
+							right: 0;
+							bottom: 40px;
+							border-radius: 5px;
+							li {
+								width: 130px;
+								height: 35px;
+								line-height: 35px;
+								padding-left: 10px;
+								border-bottom: 1px solid $c4c4c4;
+								&:nth-last-child(1) {
+									border: none;
+								}
+							}
+						}
+						&.active {
+							i {
+								transform: rotate(180deg);
+							}
+							ul.groupList {
+								display: flex;
+							}
+						}
+					}
+				}
+				.bottomWrap {
+					background-color: $white;
+					display: flex;
+					justify-content: flex-end;
+					align-items: center;
+					width: 100%;
+					height: 40px;
+					border-radius: 0 0 10px 10px;
+					button {
+						cursor: pointer;
+						font-weight: bold;
+						width: 60px;
+						height: 40px;
+						color: $mainColor;
+					}
+				}
+			}
+			&.active {
+				display: block;
 			}
 		}
 	}

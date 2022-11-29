@@ -38,6 +38,7 @@
 		<script defer src="js/days.js"></script>
 		<script defer src="js/dropDown.js"></script>
 		<script defer src="js/groupForm.js"></script>
+		<script defer src="js/todoForm.js"></script>
 		<script defer src="js/main.js"></script>
 	</head>
 	<body>
@@ -220,6 +221,44 @@
 									></i>
 								</li>
 							</ul>
+							<button type="submit">저장</button>
+						</div>
+					</form>
+				</div>
+				<div class="buttonGroupWrap">
+					<ul class="buttonGroup">
+						<li class="todoAddBtn">
+							<p>할일 추가</p>
+							<i class="fa-regular fa-square-check white"></i>
+						</li>
+						<li class="groupAddBtn">
+							<p>그룹 추가</p>
+							<i class="fa-solid fa-plus blue"></i>
+						</li>
+						<li class="buttonGroupBtn">
+							<i class="fa-solid fa-plus black"></i>
+						</li>
+					</ul>
+				</div>
+				<div id="addTodoFormWrap">
+					<form action="" name="addTodoForm" class="addTodoForm">
+						<div class="topWrap">
+							<div class="selectGroup">
+								<p>그룹</p>
+								<div class="topGroupName">
+									<p class="firstGroupName">
+										<!-- 🏋️‍♀️ 운동하기 -->
+									</p>
+									<i class="fa-solid fa-angle-up"></i>
+								</div>
+								<ul class="groupList">
+									<!-- <li class="groupItem">🏋️‍♀️ 운동하기</li>
+									<li class="groupItem">📖 공부하기</li> -->
+								</ul>
+							</div>
+						</div>
+						<input placeholder="무엇을 할까요?" type="text" />
+						<div class="bottomWrap">
 							<button type="submit">저장</button>
 						</div>
 					</form>
