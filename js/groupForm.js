@@ -50,12 +50,6 @@ function appendItem(event) {
 		$newItem.querySelector(".group").addEventListener("click", (e) => {
 			e.target.parentNode.classList.toggle("active");
 		});
-
-		$groupList.querySelectorAll(".groupItem").forEach(($groupItem) => {
-			$groupItem.addEventListener("click", (event) => {
-				$firstGroupName.innerHTML = event.target.innerHTML;
-			});
-		});
 	}
 }
 

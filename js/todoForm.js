@@ -135,10 +135,19 @@ function editItem(event) {
 		$editTodoFormWrap.style.display = "none";
 		$buttonGroupWrap.classList.remove("active");
 	};
-	$removeBtn.addEventListener("click", () => {
-		event.target.remove();
-		$editTodoFormWrap.style.display = "none";
-	});
+	$removeBtn.onclick = () => {
+		let result = confirm("정말로 삭제할까요?");
+		result;
+		if (result) {
+			event.target.remove();
+			$editTodoFormWrap.style.display = "none";
+		} else {
+		}
+	};
+	// $removeBtn.addEventListener("click", () => {
+	// 	event.target.remove();
+	// 	$editTodoFormWrap.style.display = "none";
+	// });
 }
 
 $todolist.querySelectorAll(".listItem").forEach(($listItem) => {
