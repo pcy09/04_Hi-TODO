@@ -1,11 +1,10 @@
 let $addGroupForm = document.forms.addGroupForm;
-let $todolist = document.getElementById("todolist");
 let $addGroupBtn = document.querySelector(".createGroupBtn");
 let $addGroupFormWrap = document.getElementById("addGroupFormWrap");
-let $addTodoFormWrap = document.getElementById("addTodoFormWrap");
 let groupColor = "purple";
 let $appender = $addGroupForm.querySelector("input");
-let $todoInput = $addTodoFormWrap.querySelector("input");
+
+let $todolist = document.getElementById("todolist");
 
 /* 함수 */
 // (1) 리스트 체크박스 토글 함수 (완료/취소)
@@ -42,6 +41,7 @@ function appendItem(event) {
       <button class="comment">댓글 0개 모두 보기</button>
     </ul>
     `;
+
 		$todolist.insertBefore($newItem, $createGroup);
 		$appender.value = "";
 		$addGroupFormWrap.style.display = "none";
@@ -49,6 +49,12 @@ function appendItem(event) {
 
 		$newItem.querySelector(".group").addEventListener("click", (e) => {
 			e.target.parentNode.classList.toggle("active");
+		});
+
+		$groupList.querySelectorAll(".groupItem").forEach(($groupItem) => {
+			$groupItem.addEventListener("click", (event) => {
+				$firstGroupName.innerHTML = event.target.innerHTML;
+			});
 		});
 	}
 }
@@ -60,11 +66,13 @@ $todolist.querySelectorAll(".complete").forEach(($complete) => {
 
 $addGroupForm.onsubmit = appendItem;
 
-/* 그룹추가 버튼 누르면 그룹추가 폼창 불러오기/닫기 */
+// 그룹추가 버튼 누르면 그룹추가 폼창 불러오기
 $addGroupBtn.addEventListener("click", () => {
 	$addGroupFormWrap.style.display = "block";
 	$appender.focus();
 });
+
+// 검은화면 누르면 그룹추가 폼창 닫기
 $addGroupFormWrap.addEventListener("click", (e) => {
 	if (e.target.getAttribute("id") === "addGroupFormWrap") {
 		e.target.style.display = "none";
@@ -87,40 +95,20 @@ $colorWrap.querySelectorAll(".colors").forEach(($colors) => {
 /* 버튼 그룹 토글 */
 let $buttonGroup = document.querySelector(".buttonGroupBtn");
 let $buttonGroupWrap = document.querySelector(".buttonGroupWrap");
+let $groupAddBtn = document.querySelector(".groupAddBtn");
+
+// 버튼그룹을 누르면 버튼화면 활성화/비활성화
 $buttonGroup.addEventListener("click", () => {
 	$buttonGroupWrap.classList.toggle("active");
 });
+// 검은화면 누르면 버튼화면 비활성화
 $buttonGroupWrap.addEventListener("click", (e) => {
 	if (e.target.classList.value === "buttonGroupWrap active") {
 		e.target.classList.remove("active");
 	}
 });
-
-let $groupAddBtn = document.querySelector(".groupAddBtn");
+// 버튼그룹 > 그룹추가 버튼 누르면 그룹추가 폼창 불러오기
 $groupAddBtn.addEventListener("click", () => {
 	$addGroupFormWrap.style.display = "block";
 	$appender.focus();
 });
-
-let $todoAddBtn = document.querySelector(".todoAddBtn");
-$todoAddBtn.addEventListener("click", () => {
-	$addTodoFormWrap.style.display = "block";
-	$todoInput.focus();
-});
-
-$addTodoFormWrap.addEventListener("click", (e) => {
-	if (e.target.getAttribute("id") === "addTodoFormWrap") {
-		e.target.style.display = "none";
-	}
-});
-
-/* 할일 추가 > 그룹 리스트 설정 */
-let $groupName = document.getElementsByClassName("groupName");
-let $groupList = document.querySelector(".groupList");
-let $firstGroupName = document.querySelector(".firstGroupName");
-
-for (i = 0; i < $groupName.length; i++) {
-	$groupList.innerHTML += `<li>${$groupName[i].innerHTML}</li>`;
-}
-
-$firstGroupName.innerHTML = $groupName[0].innerHTML;
