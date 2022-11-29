@@ -631,6 +631,124 @@ main #todolist #addTodoFormWrap form.addTodoForm .bottomWrap button {
 main #todolist #addTodoFormWrap.active {
   display: block;
 }
+main #todolist #editTodoFormWrap {
+  position: fixed;
+  z-index: 999;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+  left: 0;
+  top: 0;
+  display: none;
+}
+main #todolist #editTodoFormWrap form.editTodoForm {
+  position: absolute;
+  z-index: 999;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 90%;
+  max-width: 500px;
+  height: 200px;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border-radius: 10px;
+}
+main #todolist #editTodoFormWrap form.editTodoForm input {
+  flex: 1;
+  padding: 0 20px;
+  padding-bottom: 80px;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  color: #000;
+}
+main #todolist #editTodoFormWrap form.editTodoForm input::-moz-placeholder {
+  color: #c4c4c4;
+  font-size: 16px;
+}
+main #todolist #editTodoFormWrap form.editTodoForm input:-ms-input-placeholder {
+  color: #c4c4c4;
+  font-size: 16px;
+}
+main #todolist #editTodoFormWrap form.editTodoForm input::placeholder {
+  color: #c4c4c4;
+  font-size: 16px;
+}
+main #todolist #editTodoFormWrap form.editTodoForm .topWrap {
+  height: 40px;
+  display: flex;
+  align-items: center;
+  padding-left: 20px;
+  width: 100%;
+}
+main #todolist #editTodoFormWrap form.editTodoForm .topWrap .selectGroup {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+main #todolist #editTodoFormWrap form.editTodoForm .topWrap .selectGroup p {
+  pointer-events: none;
+}
+main #todolist #editTodoFormWrap form.editTodoForm .topWrap .selectGroup .topGroupName {
+  display: flex;
+  gap: 10px;
+  border: 1px solid #b1b8c0;
+  border-radius: 5px;
+  padding: 5px 10px;
+}
+main #todolist #editTodoFormWrap form.editTodoForm .topWrap .selectGroup ul.groupList {
+  position: absolute;
+  display: none;
+  flex-direction: column;
+  background-color: #fff;
+  right: 0;
+  bottom: 40px;
+  border-radius: 5px;
+}
+main #todolist #editTodoFormWrap form.editTodoForm .topWrap .selectGroup ul.groupList li {
+  width: 130px;
+  height: 35px;
+  line-height: 35px;
+  padding-left: 10px;
+  border-bottom: 1px solid #c4c4c4;
+}
+main #todolist #editTodoFormWrap form.editTodoForm .topWrap .selectGroup ul.groupList li:nth-last-child(1) {
+  border: none;
+}
+main #todolist #editTodoFormWrap form.editTodoForm .topWrap .selectGroup.active i {
+  transform: rotate(180deg);
+}
+main #todolist #editTodoFormWrap form.editTodoForm .topWrap .selectGroup.active ul.groupList {
+  display: flex;
+}
+main #todolist #editTodoFormWrap form.editTodoForm .bottomWrap {
+  background-color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 40px;
+  border-radius: 0 0 10px 10px;
+}
+main #todolist #editTodoFormWrap form.editTodoForm .bottomWrap button {
+  cursor: pointer;
+  font-weight: bold;
+  width: 60px;
+  height: 40px;
+  color: #3478f6;
+}
+main #todolist #editTodoFormWrap form.editTodoForm .bottomWrap button i {
+  font-size: 20px;
+  color: black;
+  pointer-events: none;
+}
+main #todolist #editTodoFormWrap.active {
+  display: block;
+}
 
 footer ul.navigation {
   position: fixed;
