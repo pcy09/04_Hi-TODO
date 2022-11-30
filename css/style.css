@@ -688,9 +688,10 @@ main #todolist #addTodoFormWrap form.addTodoForm .topWrap .selectGroup .topGroup
   cursor: pointer;
   display: flex;
   gap: 10px;
+  height: 30px;
   border: 1px solid #b1b8c0;
   border-radius: 5px;
-  padding: 30px 10px;
+  padding: 5px 10px;
   background-color: #3478f6;
 }
 main #todolist #addTodoFormWrap form.addTodoForm .topWrap .selectGroup .topGroupName p.firstGroupName,
