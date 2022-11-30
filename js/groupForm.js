@@ -39,6 +39,26 @@ function appendItem(event) {
     </div>
     <ul class="list">
       <button class="comment">댓글 0개 모두 보기</button>
+      <div class="commentContainer">
+      <div class="commentWrapper">
+        <div class="commentTopWrap">
+          <p>댓글 0</p>
+          <button class="close">
+            <i class="fa-solid fa-xmark"></i>
+          </button>
+        </div>
+        <div class="commentWrap">
+          <ul class="commentList">
+          </ul>
+        </div>
+        <div class="commentBottomWrap">
+          <form action="" name="addCommentForm" class="addCommentForm">
+            <img src="img/thumb1.png" alt="" />
+            <input placeholder="댓글 추가..." type="text" />
+          </form>
+        </div>
+      </div>
+    </div>
     </ul>
     `;
 
@@ -50,6 +70,54 @@ function appendItem(event) {
 		$newItem.querySelector(".group").addEventListener("click", (e) => {
 			e.target.parentNode.classList.toggle("active");
 		});
+
+		// comment버튼 누르면 댓글창 불러오기
+		$newItem.querySelector(".comment").addEventListener("click", (e) => {
+			e.target.nextElementSibling.classList.toggle("active");
+		});
+
+		// 검은화면 누르면 댓글창 닫기
+		$newItem
+			.querySelector(".commentContainer")
+			.addEventListener("click", (e) => {
+				if (e.target.classList.contains("commentContainer")) {
+					e.target.classList.toggle("active");
+				} else if (e.target.classList.contains("close")) {
+					e.target.parentNode.parentNode.parentNode.classList.toggle("active");
+				}
+			});
+
+		// 댓글추가 폼 전송하면 addComment함수 실행
+		$newItem.querySelector(".addCommentForm").onsubmit = function addComment(
+			event,
+		) {
+			event.preventDefault();
+			let $newComment = document.createElement("li");
+			let $commentAppender = $newItem.querySelector("input");
+			let $commentList =
+				event.target.parentNode.parentNode.querySelector(".commentList");
+			let $commentTopWrap =
+				event.target.parentNode.parentNode.querySelector(".commentTopWrap");
+			let $commentBtn =
+				event.target.parentNode.parentNode.parentNode.parentNode.querySelector(
+					".comment",
+				);
+
+			$newComment.className = "comment";
+			$newComment.innerHTML = `
+  <img src="img/thumb1.png" alt="" />
+  <p class="userId">pcy09</p>
+  <p>
+    <span></span>
+    ${$commentAppender.value}
+  </p>
+  `;
+			$commentList.appendChild($newComment);
+			$commentAppender.value = "";
+			let $commentCount = $commentList.getElementsByClassName("comment").length;
+			$commentTopWrap.querySelector("p").innerHTML = `댓글 ${$commentCount}`;
+			$commentBtn.innerHTML = `댓글 ${$commentCount}개 모두 보기`;
+		};
 	}
 }
 

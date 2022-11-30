@@ -250,7 +250,8 @@ main #todolist .groupWrap ul.list {
   border-radius: 10px;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.25);
 }
-main #todolist .groupWrap ul.list li {
+main #todolist .groupWrap ul.list > li {
+  cursor: pointer;
   height: 45px;
   display: flex;
   gap: 15px;
@@ -258,18 +259,18 @@ main #todolist .groupWrap ul.list li {
   padding: 0 15px;
   border-bottom: 1px solid #ededed;
 }
-main #todolist .groupWrap ul.list li button {
+main #todolist .groupWrap ul.list > li button {
   cursor: pointer;
   display: block;
   width: 55px;
   height: 45px;
 }
-main #todolist .groupWrap ul.list li button i {
+main #todolist .groupWrap ul.list > li button i {
   pointer-events: none;
   font-size: 30px;
   color: #efefef;
 }
-main #todolist .groupWrap ul.list li p {
+main #todolist .groupWrap ul.list > li p {
   flex: 1;
   line-height: 45px;
   padding-bottom: 4px;
@@ -284,6 +285,108 @@ main #todolist .groupWrap ul.list button.comment {
   width: 100%;
   height: 45px;
   color: #b1b8c0;
+}
+main #todolist .groupWrap ul.list button.comment span {
+  font-size: 15px;
+  color: inherit;
+}
+main #todolist .groupWrap .commentContainer {
+  display: none;
+  z-index: 9999;
+  position: fixed;
+  left: 50%;
+  bottom: 0;
+  transform: translateX(-50%);
+  width: 100%;
+  height: 100vh;
+  max-width: 800px;
+  background-color: rgba(0, 0, 0, 0.25);
+}
+main #todolist .groupWrap .commentContainer .commentWrapper {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 50%;
+  padding-bottom: 60px;
+  bottom: 0;
+  background-color: #fff;
+  border-radius: 20px 20px 0 0;
+}
+main #todolist .groupWrap .commentContainer .commentWrapper .commentTopWrap {
+  width: 100%;
+  height: 70px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 20px;
+}
+main #todolist .groupWrap .commentContainer .commentWrapper .commentTopWrap p {
+  font-size: 18px;
+  font-weight: bold;
+}
+main #todolist .groupWrap .commentContainer .commentWrapper .commentTopWrap p span {
+  margin-left: 5px;
+}
+main #todolist .groupWrap .commentContainer .commentWrapper .commentTopWrap button {
+  cursor: pointer;
+  width: 80px;
+  height: 70px;
+}
+main #todolist .groupWrap .commentContainer .commentWrapper .commentTopWrap button i {
+  pointer-events: none;
+  font-size: 30px;
+}
+main #todolist .groupWrap .commentContainer .commentWrapper .commentWrap {
+  width: 100%;
+  padding: 0 20px;
+  overflow-y: auto;
+}
+main #todolist .groupWrap .commentContainer .commentWrapper .commentWrap ul.commentList {
+  padding-bottom: 50px;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+main #todolist .groupWrap .commentContainer .commentWrapper .commentWrap ul.commentList li.comment {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+main #todolist .groupWrap .commentContainer .commentWrapper .commentWrap ul.commentList li.comment img {
+  width: 30px;
+  height: 30px;
+}
+main #todolist .groupWrap .commentContainer .commentWrapper .commentWrap ul.commentList li.comment p span {
+  color: #3478f6;
+  font-weight: bold;
+}
+main #todolist .groupWrap .commentContainer .commentWrapper .commentWrap ul.commentList li.comment p.userId {
+  font-weight: bold;
+}
+main #todolist .groupWrap .commentContainer .commentWrapper .commentBottomWrap {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  padding: 10px 20px;
+}
+main #todolist .groupWrap .commentContainer .commentWrapper .commentBottomWrap form {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+main #todolist .groupWrap .commentContainer .commentWrapper .commentBottomWrap form img {
+  width: 40px;
+  height: 40px;
+}
+main #todolist .groupWrap .commentContainer .commentWrapper .commentBottomWrap form input {
+  flex: 1;
+  height: 40px;
+  border: none;
+  outline: none;
+}
+main #todolist .groupWrap .commentContainer.active {
+  display: block;
 }
 main #todolist .groupWrap.active ul.list {
   height: auto;
