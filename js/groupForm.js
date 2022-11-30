@@ -73,7 +73,9 @@ function appendItem(event) {
 
 		// comment버튼 누르면 댓글창 불러오기
 		$newItem.querySelector(".comment").addEventListener("click", (e) => {
+			let $commentAppender = $newItem.querySelector("input");
 			e.target.nextElementSibling.classList.toggle("active");
+			$commentAppender.focus();
 		});
 
 		// 검은화면 누르면 댓글창 닫기
@@ -82,8 +84,12 @@ function appendItem(event) {
 			.addEventListener("click", (e) => {
 				if (e.target.classList.contains("commentContainer")) {
 					e.target.classList.toggle("active");
+					e.target.querySelector("input").value = "";
 				} else if (e.target.classList.contains("close")) {
 					e.target.parentNode.parentNode.parentNode.classList.toggle("active");
+					e.target.parentNode.parentNode.parentNode.querySelector(
+						"input",
+					).value = "";
 				}
 			});
 

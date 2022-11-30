@@ -2,6 +2,7 @@
 $todolist.querySelectorAll(".comment").forEach(($comment) => {
 	$comment.onclick = (e) => {
 		e.target.nextElementSibling.classList.toggle("active");
+		e.target.nextElementSibling.querySelector("input").focus();
 	};
 });
 
@@ -10,8 +11,11 @@ $todolist.querySelectorAll(".commentContainer").forEach(($commentContainer) => {
 	$commentContainer.onclick = (e) => {
 		if (e.target.classList.contains("commentContainer")) {
 			e.target.classList.toggle("active");
+			e.target.querySelector("input").value = "";
 		} else if (e.target.classList.contains("close")) {
 			e.target.parentNode.parentNode.parentNode.classList.toggle("active");
+			e.target.parentNode.parentNode.parentNode.querySelector("input").value =
+				"";
 		}
 	};
 });
