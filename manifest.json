@@ -1,0 +1,54 @@
+{
+	"name": "모바일 웹&앱 프로젝트",
+	"short_name": "todolist",
+	"background_color": "#ffffff",
+	"theme_color": "#ffffff",
+	"description": "모바일 웹&앱 프로젝트",
+	"dir": "auto",
+	"display": "standalone",
+	"orientation": "any",
+	"lang": "ko",
+	"scope": "https://pcy09.github.io/project2-pwa/",
+	"start_url": "https://pcy09.github.io/project2-pwa/",
+	"gcm_sender_id": "",
+	"gcm_user_visible_only": true,
+	"screenshots": [
+		{
+			"src": "img/screenshot_1.png",
+			"sizes": "798x920",
+			"type": "image/png"
+		},
+		{
+			"src": "img/screenshot_2.png",
+			"sizes": "801x917",
+			"type": "image/png"
+		},
+		{
+			"src": "img/screenshot_3.png",
+			"sizes": "796x912",
+			"type": "image/png"
+		}
+	],
+	"categories": [],
+	"icons": [
+		{
+			"purpose": "any",
+			"src": "img/icon_512.png",
+			"sizes": "512x512",
+			"type": "image/png"
+		},
+		{
+			"purpose": "maskable",
+			"src": "img/icon_128.png",
+			"sizes": "128x128",
+			"type": "image/png"
+		},
+		{
+			"purpose": "maskable",
+			"src": "img/icon_48.png",
+			"sizes": "48x48",
+			"type": "image/png"
+		}
+	],
+	"shortcuts": []
+}
