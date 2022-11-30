@@ -690,7 +690,7 @@ main #todolist #addTodoFormWrap form.addTodoForm .topWrap .selectGroup .topGroup
   gap: 10px;
   border: 1px solid #b1b8c0;
   border-radius: 5px;
-  padding: 5px 10px;
+  padding: 10px 10px;
   background-color: #3478f6;
 }
 main #todolist #addTodoFormWrap form.addTodoForm .topWrap .selectGroup .topGroupName p.firstGroupName,
