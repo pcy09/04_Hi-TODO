@@ -1,3 +1,8 @@
+/* a href='#' 클릭 무시 */
+$('a[href="#"]').click(function (ignore) {
+	ignore.preventDefault();
+});
+
 // comment버튼 누르면 댓글창 불러오기
 $todolist.querySelectorAll(".comment").forEach(($comment) => {
 	$comment.onclick = (e) => {

@@ -83,6 +83,7 @@ main {
 	#todolist {
 		width: 100%;
 		padding: 20px 20px 100px;
+		border-top: 1px solid #ededed;
 		.groupWrap {
 			margin: auto;
 			margin-bottom: 20px;
@@ -92,31 +93,30 @@ main {
 				cursor: pointer;
 				margin-bottom: 5px;
 				width: 100%;
-				height: 45px;
-				border-radius: 10px;
+				height: 35px;
+				border-radius: 5px;
 				padding-left: 15px;
 				display: flex;
 				align-items: center;
 				justify-content: space-between;
-				box-shadow: 0 0 5px rgba(0, 0, 0, 0.25);
+				// box-shadow: 0 0 5px rgba(0, 0, 0, 0.25);
 				.groupContainer {
 					position: absolute;
 					left: 0;
 					top: 0;
 					width: 100%;
-					height: 45px;
+					height: 35px;
 				}
 				p.groupName {
-					font-size: 18px;
-					font-weight: 500;
+					font-size: 16px;
 					color: $white;
-					line-height: 45px;
+					line-height: 35px;
 					pointer-events: none;
 				}
 				span {
 					pointer-events: none;
 					width: 45px;
-					height: 45px;
+					height: 35px;
 					display: flex;
 					justify-content: center;
 					align-items: center;
@@ -144,22 +144,22 @@ main {
 				height: 0;
 				overflow: hidden;
 				background-color: $white;
-				border-radius: 10px;
+				border-radius: 5px;
 				box-shadow: 0 0 5px rgba(0, 0, 0, 0.25);
 
 				> li {
 					cursor: pointer;
-					height: 45px;
+					height: 35px;
 					display: flex;
 					gap: 15px;
 					align-items: center;
-					padding: 0 15px;
+					padding-left: 15px;
 					border-bottom: 1px solid $ededed;
 					button {
 						cursor: pointer;
 						display: block;
 						width: 55px;
-						height: 45px;
+						height: 35px;
 						i {
 							pointer-events: none;
 							font-size: 30px;
@@ -168,19 +168,20 @@ main {
 					}
 					p {
 						flex: 1;
-						line-height: 45px;
+						line-height: 35px;
 						padding-bottom: 4px;
 						white-space: nowrap;
 						overflow: hidden;
 						text-overflow: ellipsis;
 						pointer-events: none;
+						font-size: 14px;
 					}
 				}
 				button.comment {
 					cursor: pointer;
 					font-size: 15px;
 					width: 100%;
-					height: 45px;
+					height: 35px;
 					color: $b1b8c0;
 					span {
 						font-size: 15px;
@@ -302,9 +303,9 @@ main {
 			margin: auto;
 			width: 100%;
 			max-width: 600px;
-			height: 45px;
+			height: 35px;
 			background-color: $white;
-			border-radius: 10px;
+			border-radius: 5px;
 			box-shadow: 0 0 5px rgba(0, 0, 0, 0.25);
 			padding: 0 20px;
 			button {

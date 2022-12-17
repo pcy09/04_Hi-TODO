@@ -14,7 +14,7 @@ for (let i = 0; i < daysLength; i++) {
 	if (i === 0) {
 		text += `
     <div class="swiper-slide" >
-      <a href="" class="checked">
+      <a href="#" class="checked">
         <p>${day[i]}</p>
         <p>${days[i]}</p>
       </a>
@@ -23,7 +23,7 @@ for (let i = 0; i < daysLength; i++) {
 	} else {
 		text += `
   <div class="swiper-slide">
-    <a href="">
+    <a href="#">
       <p>${day[i]}</p>
       <p>${days[i]}</p>
     </a>
