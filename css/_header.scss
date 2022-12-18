@@ -40,10 +40,11 @@ header {
 		}
 	}
 	.formWrapper {
-		height: 60px;
+		height: 75px;
 		display: flex;
 		justify-content: center;
 		align-items: center;
+		padding-top: 15px;
 		.inputWrapper {
 			width: 80%;
 			height: 40px;

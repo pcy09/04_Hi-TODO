@@ -81,10 +81,11 @@ header .headerWrap ul.subMenu li a i {
   color: #000;
 }
 header .formWrapper {
-  height: 60px;
+  height: 75px;
   display: flex;
   justify-content: center;
   align-items: center;
+  padding-top: 15px;
 }
 header .formWrapper .inputWrapper {
   width: 80%;
@@ -141,30 +142,39 @@ main #section1 .swiper.profile .swiper-slide a {
 }
 main #section1 .swiper.profile .swiper-slide .thumbnail.thumb1 {
   background-image: url("../img/thumb1.png");
+  background-size: cover;
 }
 main #section1 .swiper.profile .swiper-slide .thumbnail.thumb2 {
   background-image: url("../img/thumb2.png");
+  background-size: cover;
 }
 main #section1 .swiper.profile .swiper-slide .thumbnail.thumb3 {
   background-image: url("../img/thumb3.png");
+  background-size: cover;
 }
 main #section1 .swiper.profile .swiper-slide .thumbnail.thumb4 {
   background-image: url("../img/thumb4.png");
+  background-size: cover;
 }
 main #section1 .swiper.profile .swiper-slide .thumbnail.thumb5 {
   background-image: url("../img/thumb5.png");
+  background-size: cover;
 }
 main #section1 .swiper.profile .swiper-slide .thumbnail.thumb6 {
   background-image: url("../img/thumb6.png");
+  background-size: cover;
 }
 main #section1 .swiper.profile .swiper-slide .thumbnail.thumb7 {
   background-image: url("../img/thumb7.png");
+  background-size: cover;
 }
 main #section1 .swiper.profile .swiper-slide .thumbnail.thumb8 {
   background-image: url("../img/thumb8.png");
+  background-size: cover;
 }
 main #section1 .swiper.profile .swiper-slide .thumbnail.thumb9 {
   background-image: url("../img/thumb9.png");
+  background-size: cover;
 }
 main #section1 .swiper.profile .swiper-slide .thumbnail {
   width: 60px;
@@ -1093,23 +1103,23 @@ main #myProfile {
 main #myProfile .profileWrapper {
   display: flex;
   align-items: center;
-  gap: 20px;
+  gap: 25px;
   width: 100%;
   padding: 30px 0;
   padding-left: 5%;
 }
 main #myProfile .profileWrapper img {
-  width: 60px;
-  height: 60px;
+  width: 100px;
+  height: 100px;
 }
 main #myProfile .profileWrapper .textWrap {
   display: flex;
-  gap: 10px;
+  gap: 15px;
   flex-direction: column;
   justify-content: center;
 }
 main #myProfile .profileWrapper .textWrap h3 {
-  font-size: 16px;
+  font-size: 20px;
   font-weight: bold;
 }
 main #myProfile .profileWrapper .textWrap p {
