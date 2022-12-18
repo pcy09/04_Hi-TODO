@@ -72,10 +72,20 @@ header {
 		justify-content: center;
 		align-items: center;
 		border-bottom: 1px solid #efefef;
-
+		position: relative;
 		h3 {
 			font-size: 25px;
 			font-weight: bold;
+		}
+		i {
+			cursor: pointer;
+			position: absolute;
+			font-size: 20px;
+			color: black;
+			padding: 20px 5%;
+			right: 0;
+			top: 60%;
+			transform: translateY(-50%);
 		}
 	}
 }

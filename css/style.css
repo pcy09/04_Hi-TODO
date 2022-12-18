@@ -113,10 +113,21 @@ header .mypageWrapper {
   justify-content: center;
   align-items: center;
   border-bottom: 1px solid #efefef;
+  position: relative;
 }
 header .mypageWrapper h3 {
   font-size: 25px;
   font-weight: bold;
+}
+header .mypageWrapper i {
+  cursor: pointer;
+  position: absolute;
+  font-size: 20px;
+  color: black;
+  padding: 20px 5%;
+  right: 0;
+  top: 60%;
+  transform: translateY(-50%);
 }
 
 main #section1 {
