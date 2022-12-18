@@ -1,7 +1,7 @@
 @import "variable";
 main {
-	margin-top: 55px;
 	#section1 {
+		margin-top: 55px;
 		background-color: $white;
 		.swiper.profile {
 			width: 100%;
@@ -15,6 +15,7 @@ main {
 					display: flex;
 					flex-direction: column;
 					justify-content: center;
+					align-items: center;
 					gap: 5px;
 				}
 				@each $item in $thumbnail {
@@ -29,12 +30,14 @@ main {
 				}
 
 				p {
-					font-size: 14px;
+					font-size: 12px;
 					text-align: center;
 					color: $b1b8c0;
 				}
 				p.active {
+					font-size: 14px;
 					color: $black;
+					font-weight: bold;
 				}
 			}
 		}
@@ -202,7 +205,7 @@ main {
 				background-color: rgba(0, 0, 0, 0.25);
 				.commentWrapper {
 					position: absolute;
-					display: flex;
+					// display: flex;
 					flex-direction: column;
 					width: 100%;
 					height: 80%;
@@ -211,6 +214,8 @@ main {
 					bottom: 0;
 					background-color: $white;
 					border-radius: 20px 20px 0 0;
+					transition: all 0.5s;
+
 					.commentTopWrap {
 						width: 100%;
 						height: 70px;
@@ -288,6 +293,18 @@ main {
 				}
 				&.active {
 					display: block;
+					.commentWrapper {
+						display: flex;
+						animation: heightAni 0.8s forwards;
+						@keyframes heightAni {
+							0% {
+								height: 0;
+							}
+							100% {
+								height: 80%;
+							}
+						}
+					}
 				}
 			}
 			&.active {
@@ -740,6 +757,224 @@ main {
 			}
 			&.active {
 				display: block;
+			}
+		}
+	}
+	#calendarWrap {
+		display: flex;
+		justify-content: center;
+		margin-top: 55px;
+
+		.calendar {
+			width: 600px;
+			.header {
+				display: flex;
+				justify-content: flex-end;
+				align-items: center;
+				position: relative;
+				height: 30px;
+				.year-month {
+					position: absolute;
+					left: 50%;
+					transform: translateX(-50%);
+					font-size: 25px;
+					font-weight: bold;
+				}
+				.nav {
+					display: none;
+					button {
+						&.nav-btn {
+							width: 28px;
+							height: 30px;
+							line-height: 34px;
+							cursor: pointer;
+						}
+						&.go-today {
+							width: 75px;
+						}
+					}
+					&.active {
+						display: flex;
+					}
+				}
+			}
+			.main {
+				.days {
+					display: flex;
+					margin: 25px 0 10px;
+					.day {
+						width: calc(100% / 7);
+						text-align: center;
+					}
+				}
+				.dates {
+					display: none;
+					flex-flow: row wrap;
+					overflow: hidden;
+					.date {
+						width: calc(100% / 7);
+						padding: 15px;
+						text-align: center;
+					}
+					&.active {
+						display: flex;
+					}
+				}
+				.weekDays {
+					display: none;
+					transition: all 0.8s;
+					overflow: hidden;
+					p {
+						width: calc(100% / 7);
+						padding: 25px;
+						text-align: center;
+					}
+					&.active {
+						display: flex;
+					}
+				}
+			}
+			.day:nth-child(7n + 1),
+			.date:nth-child(7n + 1) {
+				color: #d13e3e;
+			}
+			.day:nth-child(7n),
+			.date:nth-child(7n) {
+				color: #396ee2;
+			}
+			.other {
+				opacity: 0.3;
+			}
+			.today {
+				position: relative;
+				color: #fff;
+				z-index: 0;
+				&:before {
+					content: "";
+					position: absolute;
+					left: 50%;
+					top: 50%;
+					transform: translate(-50%, -50%);
+					z-index: -1;
+					width: 30px;
+					height: 30px;
+					background-color: #ff0000;
+					border-radius: 50%;
+				}
+			}
+		}
+	}
+	#searchWrap {
+		margin-top: 60px;
+	}
+	.tabWrapper {
+		ul.tabMenu {
+			display: flex;
+			justify-content: center;
+			li {
+				flex: 1;
+				text-align: center;
+				a {
+					display: block;
+					padding: 15px 0;
+					width: 100%;
+					height: 100%;
+					border-bottom: 1px solid $b1b8c0;
+					color: $b1b8c0;
+					&.active {
+						border-bottom: 2px solid $black;
+						color: $black;
+						font-weight: bold;
+					}
+				}
+			}
+		}
+		#tabContent {
+			> div {
+				display: none;
+				&.active {
+					display: block;
+				}
+				.todoList {
+					display: flex;
+					width: 100%;
+					height: 80px;
+					align-items: center;
+					padding: 10px 5%;
+					gap: 15px;
+					cursor: pointer;
+					&:hover {
+						background-color: rgba(187, 187, 187, 0.1);
+					}
+					img {
+						width: 50px;
+						height: 50px;
+					}
+					.textWrap {
+						flex: 1;
+						display: flex;
+						flex-direction: column;
+						gap: 5px;
+						h3 {
+							font-weight: bold;
+						}
+						p {
+							color: $b1b8c0;
+						}
+					}
+					&.dNone {
+						display: none;
+					}
+				}
+			}
+		}
+	}
+	#myProfile {
+		margin-top: 60px;
+		.profileWrapper {
+			display: flex;
+			align-items: center;
+			gap: 20px;
+			width: 100%;
+			padding: 30px 0;
+			padding-left: 5%;
+			img {
+				width: 60px;
+				height: 60px;
+			}
+			.textWrap {
+				display: flex;
+				gap: 10px;
+				flex-direction: column;
+				justify-content: center;
+
+				h3 {
+					font-size: 16px;
+					font-weight: bold;
+				}
+				p {
+					font-size: 16px;
+					color: $b1b8c0;
+				}
+			}
+		}
+		.profileEditor {
+			width: 100%;
+			height: 50px;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			p {
+				display: block;
+				border-radius: 5px;
+				width: 90%;
+				line-height: 40px;
+				text-align: center;
+				background-color: $ededed;
+				font-size: 14px;
+				font-weight: bold;
+				color: $black;
+				cursor: pointer;
 			}
 		}
 	}

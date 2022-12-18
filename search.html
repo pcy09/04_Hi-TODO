@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="ko" ondragstart="return false" onselectstart="return false">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta
+			content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"
+			name="viewport"
+		/>
+		<!-- 아이폰에서 모바일 웹을 웹앱 형태로 설정하는 코드 -->
+		<meta name="mobile-web-app-capable" content="yes" />
+		<!-- 파비콘 설정 -->
+		<link rel="shortcut icon" href="img/icon.png" type="image/x-icon" />
+		<!-- manifest연결 -->
+		<link rel="manifest" href="manifest.json" />
+		<title>todolist</title>
+		<!-- reset CDN -->
+		<link
+			rel="stylesheet"
+			href="https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.css"
+		/>
+		<!-- 구글폰트 CDN -->
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700;900&display=swap"
+			rel="stylesheet"
+		/>
+		<link
+			href="https://fonts.googleapis.com/css2?family=Anton&display=swap"
+			rel="stylesheet"
+		/>
+		<!-- 폰트어썸 CDN-->
+		<script
+			src="https://kit.fontawesome.com/a9626ecfba.js"
+			crossorigin="anonymous"
+		></script>
+		<!-- swiper CSS -->
+		<link
+			rel="stylesheet"
+			href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"
+		/>
+		<!-- CSS -->
+		<link rel="stylesheet" href="css/style.css" />
+		<!-- jQuery CDN -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+		<!-- swiper js -->
+		<script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+		<!-- 스크립트 -->
+		<script defer src="js/dropDown.js"></script>
+		<script defer src="js/main.js"></script>
+		<script defer src="js/search.js"></script>
+		<script defer src="js/tabs.js"></script>
+		<!-- serviceWorker -->
+		<script>
+			if ("serviceWorker" in navigator) {
+				// 서비스워커가 있을 때(서비스워커 지원여부)
+				navigator.serviceWorker
+					.register("service-worker.js")
+					.then((success) => {
+						console.log("serviceWorker 설치에 성공했습니다!!", success);
+					})
+					.catch((error) => {
+						console.log("serviceWorker 설치에 실패했습니다ㅠㅠ", error);
+					});
+			}
+		</script>
+	</head>
+	<body>
+		<header>
+			<div class="formWrapper">
+				<div class="inputWrapper">
+					<i class="fa-solid fa-magnifying-glass"></i>
+					<input placeholder="검색" type="search" />
+				</div>
+			</div>
+		</header>
+		<main>
+			<section id="searchWrap">
+				<div class="tabWrapper">
+					<ul class="tabMenu">
+						<li><a href="#tabs-1" class="active">할 일</a></li>
+						<li><a href="#tabs-2">계정</a></li>
+					</ul>
+					<div id="tabContent">
+						<div id="tabs-1" class="active">
+							<div class="todoList">
+								<img src="img/thumb2.png" alt="" />
+								<div class="textWrap">
+									<h3>yongha</h3>
+									<p>달리기 운동 1시간</p>
+								</div>
+							</div>
+							<div class="todoList">
+								<img src="img/thumb3.png" alt="" />
+								<div class="textWrap">
+									<h3>HAN</h3>
+									<p>코딩 연습 하기</p>
+								</div>
+							</div>
+							<div class="todoList">
+								<img src="img/thumb4.png" alt="" />
+								<div class="textWrap">
+									<h3>lijung</h3>
+									<p>밥먹고 1시간 러닝하기</p>
+								</div>
+							</div>
+							<div class="todoList">
+								<img src="img/thumb5.png" alt="" />
+								<div class="textWrap">
+									<h3>tomatojin</h3>
+									<p>1시간 공부하기</p>
+								</div>
+							</div>
+							<div class="todoList">
+								<img src="img/thumb6.png" alt="" />
+								<div class="textWrap">
+									<h3>komstik</h3>
+									<p>아침 달리기 1시간</p>
+								</div>
+							</div>
+							<div class="todoList">
+								<img src="img/thumb7.png" alt="" />
+								<div class="textWrap">
+									<h3>y0ny_p</h3>
+									<p>마트에서 장보기</p>
+								</div>
+							</div>
+							<div class="todoList">
+								<img src="img/thumb8.png" alt="" />
+								<div class="textWrap">
+									<h3>yonmee</h3>
+									<p>매일 만원 저축하기</p>
+								</div>
+							</div>
+							<div class="todoList">
+								<img src="img/thumb9.png" alt="" />
+								<div class="textWrap">
+									<h3>yanuyao</h3>
+									<p>코딩 유튜브 영상 보기</p>
+								</div>
+							</div>
+							<div class="todoList">
+								<img src="img/thumb10.png" alt="" />
+								<div class="textWrap">
+									<h3>hoopa7124</h3>
+									<p>깃허브 정리</p>
+								</div>
+							</div>
+						</div>
+						<div id="tabs-2">
+							<div class="todoList">
+								<img src="img/thumb12.png" alt="" />
+								<div class="textWrap">
+									<h3>hoopa7124</h3>
+								</div>
+							</div>
+							<div class="todoList">
+								<img src="img/thumb11.png" alt="" />
+								<div class="textWrap">
+									<h3>yonmee</h3>
+								</div>
+							</div>
+							<div class="todoList">
+								<img src="img/thumb10.png" alt="" />
+								<div class="textWrap">
+									<h3>komstik</h3>
+								</div>
+							</div>
+							<div class="todoList">
+								<img src="img/thumb9.png" alt="" />
+								<div class="textWrap">
+									<h3>y0ny_p</h3>
+								</div>
+							</div>
+							<div class="todoList">
+								<img src="img/thumb8.png" alt="" />
+								<div class="textWrap">
+									<h3>yanuyao</h3>
+								</div>
+							</div>
+							<div class="todoList">
+								<img src="img/thumb5.png" alt="" />
+								<div class="textWrap">
+									<h3>tomatojin</h3>
+								</div>
+							</div>
+							<div class="todoList">
+								<img src="img/thumb3.png" alt="" />
+								<div class="textWrap">
+									<h3>HAN</h3>
+								</div>
+							</div>
+							<div class="todoList">
+								<img src="img/thumb4.png" alt="" />
+								<div class="textWrap">
+									<h3>lijung</h3>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+		</main>
+		<footer>
+			<ul class="navigation">
+				<li>
+					<a href="index.html"><i class="fa-solid fa-house"></i></a>
+				</li>
+				<li>
+					<a href="calendar.html"><i class="fa-solid fa-calendar-days"></i></a>
+				</li>
+				<li class="selected">
+					<a href="search.html"><i class="fa-solid fa-magnifying-glass"></i></a>
+				</li>
+				<li>
+					<a href="mypage.html"><i class="fa-solid fa-user"></i></a>
+				</li>
+			</ul>
+		</footer>
+	</body>
+</html>

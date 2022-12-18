@@ -39,4 +39,42 @@ header {
 			}
 		}
 	}
+	.formWrapper {
+		height: 60px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		.inputWrapper {
+			width: 80%;
+			height: 40px;
+			border-radius: 5px;
+			background-color: $efefef;
+			display: flex;
+			align-items: center;
+			gap: 20px;
+		}
+		i {
+			padding-left: 10px;
+			color: $b1b8c0;
+		}
+		input {
+			width: 100%;
+			border: none;
+			outline: none;
+			background-color: transparent;
+			padding-right: 5%;
+		}
+	}
+	.mypageWrapper {
+		height: 60px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		border-bottom: 1px solid #efefef;
+
+		h3 {
+			font-size: 25px;
+			font-weight: bold;
+		}
+	}
 }
