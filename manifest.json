@@ -8,8 +8,8 @@
 	"display": "standalone",
 	"orientation": "any",
 	"lang": "ko",
-	"scope": "https://pcy09.github.io/project2-pwa/",
-	"start_url": "https://pcy09.github.io/project2-pwa/",
+	"scope": "https://pcy09.github.io/04_Hi-TODO/",
+	"start_url": "https://pcy09.github.io/04_Hi-TODO/",
 	"gcm_sender_id": "",
 	"gcm_user_visible_only": true,
 	"screenshots": [
