@@ -54,20 +54,6 @@
 		<script defer src="js/todoForm.js"></script>
 		<script defer src="js/comment.js"></script>
 		<script defer src="js/main.js"></script>
-		<!-- serviceWorker -->
-		<script>
-			if ("serviceWorker" in navigator) {
-				// 서비스워커가 있을 때(서비스워커 지원여부)
-				navigator.serviceWorker
-					.register("service-worker.js")
-					.then((success) => {
-						console.log("serviceWorker 설치에 성공했습니다!!", success);
-					})
-					.catch((error) => {
-						console.log("serviceWorker 설치에 실패했습니다ㅠㅠ", error);
-					});
-			}
-		</script>
 	</head>
 	<body>
 		<header>
