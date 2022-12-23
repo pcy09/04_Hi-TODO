@@ -5,7 +5,6 @@
 
 ## 사이트 주소
 - <a href="https://pcy09.github.io/04_Hi-TODO/" target="_blank">웹사이트</a>
-- [Google][]
 - <a href="https://www.figma.com/proto/Kwqlx1WOWcEY9D5mhy57Y2/todoList?page-id=5%3A2088&node-id=59%3A24&viewport=-219%2C3654%2C0.95&scaling=scale-down&starting-point-node-id=59%3A24" target="_blank">피그마</a>
 ## 프로젝트 설명
 
@@ -32,5 +31,3 @@
   - 입력값과 일치하는 내용 가져옴
 
 
-# link define
-[Google]: http://google.com/ 
